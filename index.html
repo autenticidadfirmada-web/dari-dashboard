@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dari Dashboard — X-Tracking</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: #f1f5f9; color: #1e293b; }
+  .header { background: linear-gradient(135deg, #1e40af, #3b82f6); color: white; padding: 32px 40px; }
+  .header h1 { font-size: 28px; font-weight: 700; }
+  .header p { opacity: 0.85; margin-top: 6px; font-size: 14px; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 32px 24px; }
+  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; margin-bottom: 32px; }
+  .kpi { background: white; border-radius: 12px; padding: 20px; box-shadow: 0 1px 3px rgba(0,0,0,.08); text-align: center; }
+  .kpi-valor { font-size: 42px; font-weight: 800; line-height: 1; }
+  .kpi-label { font-size: 13px; color: #64748b; margin-top: 6px; }
+  .kpi-verde .kpi-valor { color: #16a34a; }
+  .kpi-azul .kpi-valor { color: #2563eb; }
+  .kpi-naranja .kpi-valor { color: #d97706; }
+  .kpi-gris .kpi-valor { color: #475569; }
+  .kpi-rojo .kpi-valor { color: #b91c1c; }
+  .section { background: white; border-radius: 12px; padding: 24px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,.08); }
+  .section h2 { font-size: 17px; font-weight: 700; margin-bottom: 16px; color: #1e293b; border-bottom: 2px solid #e2e8f0; padding-bottom: 10px; }
+  table { width: 100%; border-collapse: collapse; font-size: 14px; }
+  th { text-align: left; padding: 10px 12px; background: #f8fafc; color: #475569; font-weight: 600; border-bottom: 1px solid #e2e8f0; }
+  td { padding: 10px 12px; border-bottom: 1px solid #f1f5f9; }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: #f8fafc; }
+  .badge { padding: 3px 10px; border-radius: 999px; font-size: 12px; font-weight: 600; }
+  .badge-success { background: #dcfce7; color: #16a34a; }
+  .badge-warning { background: #fef9c3; color: #92400e; }
+  .badge-info { background: #dbeafe; color: #1d4ed8; }
+  .badge-danger { background: #fee2e2; color: #b91c1c; cursor: help; }
+  .recom-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+  .recom-card { background: #eff6ff; border-left: 4px solid #3b82f6; border-radius: 8px; padding: 16px; }
+  .recom-titulo { font-weight: 700; font-size: 14px; color: #1e40af; margin-bottom: 6px; }
+  .recom-detalle { font-size: 13px; color: #334155; line-height: 1.5; }
+  .empty { text-align: center; color: #94a3b8; padding: 24px; font-size: 14px; }
+  .footer { text-align: center; color: #94a3b8; font-size: 12px; padding: 24px; }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <h1>🤖 Dari — Dashboard Comercial</h1>
+  <p>X-Tracking · Informe generado el martes, 7 de julio de 2026</p>
+</div>
+
+<div class="container">
+
+  <!-- KPIs -->
+  <div class="kpis">
+    <div class="kpi kpi-azul">
+      <div class="kpi-valor">26</div>
+      <div class="kpi-label">Emails enviados</div>
+    </div>
+    <div class="kpi kpi-verde">
+      <div class="kpi-valor">0</div>
+      <div class="kpi-label">Respondieron</div>
+    </div>
+    <div class="kpi kpi-gris">
+      <div class="kpi-valor">0%</div>
+      <div class="kpi-label">Tasa de respuesta</div>
+    </div>
+    <div class="kpi kpi-naranja">
+      <div class="kpi-valor">26</div>
+      <div class="kpi-label">Sin respuesta</div>
+    </div>
+    <div class="kpi kpi-rojo">
+      <div class="kpi-valor">3</div>
+      <div class="kpi-label">Rebotados</div>
+    </div>
+    <div class="kpi kpi-gris">
+      <div class="kpi-valor">0</div>
+      <div class="kpi-label">Follow-ups enviados</div>
+    </div>
+    <div class="kpi kpi-azul">
+      <div class="kpi-valor">17</div>
+      <div class="kpi-label">Leads en pipeline</div>
+    </div>
+  </div>
+
+  <!-- Recomendaciones -->
+  <div class="section">
+    <h2>💡 Recomendaciones de la semana</h2>
+    <div class="recom-grid">
+      
+    <div class="recom-card">
+      <div class="recom-titulo">💡 Tasa de respuesta en 0%</div>
+      <div class="recom-detalle">26 correos enviados y ninguna respuesta registrada. Antes de cambiar el mensaje, confirma que log_respuestas.json se está actualizando (requiere IMAP activo) — puede que sí haya respuestas pero no se estén detectando.</div>
+    </div>
+    <div class="recom-card">
+      <div class="recom-titulo">💡 Seguimientos pendientes</div>
+      <div class="recom-detalle">Hay 26 leads sin respuesta y 0 con seguimiento enviado. Corre seguimiento.js para los que llevan más de 4 días sin contestar.</div>
+    </div>
+    </div>
+  </div>
+
+  <!-- Por industria -->
+  <div class="section">
+    <h2>🏭 Desempeño por industria</h2>
+    
+    <table>
+      <thead><tr><th>Industria</th><th>Enviados</th><th>Respondieron</th><th>Tasa</th></tr></thead>
+      <tbody><tr>
+      <td><strong>Sin clasificar</strong></td>
+      <td>26</td>
+      <td>0</td>
+      <td><span style="color:#ef4444;font-weight:700">0%</span></td>
+    </tr></tbody>
+    </table>
+  </div>
+
+  <!-- Respondieron -->
+  <div class="section">
+    <h2>✅ Leads que respondieron</h2>
+    <div class="empty">Aún no hay respuestas registradas. Registra las respuestas en log_respuestas.json</div>
+  </div>
+
+  <!-- Sin respuesta -->
+  <div class="section">
+    <h2>⏳ Leads sin respuesta</h2>
+    
+    <table>
+      <thead><tr><th>Contacto</th><th>Empresa</th><th>Email</th><th>Estado</th></tr></thead>
+      <tbody><tr>
+      <td>Pilar Rodríguez</td>
+      <td>Grupo Nutresa – Unidad Restaurantes</td>
+      <td>prodriguez@gruponutresa.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Alejandra Gómez</td>
+      <td>Alsea Colombia</td>
+      <td>alejandra.gomez@alsea.net</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Tatiana Mejía Casas</td>
+      <td>Tostao' Café & Pan</td>
+      <td>tatiana.mejia@tostao.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Reynaldo González</td>
+      <td>MesoFoods (OMA, Presto)</td>
+      <td>reynaldo.gonzalez@mesofoods.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>María del Pilar Amorocho</td>
+      <td>Sandwich Qbano</td>
+      <td>pilar.amorocho@qbano.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Santiago Reina</td>
+      <td>Arcos Dorados (McDonald's Colombia)</td>
+      <td>santiago.reina@arcosdorados.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Lesdy Cortés (verificar)</td>
+      <td>Cosechas Colombia</td>
+      <td>lesdy.cortes@cosechas.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Maribel Gómez</td>
+      <td>Chef Burger</td>
+      <td>maribel.gomez@chefburger.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Camilo Sarasti Samper</td>
+      <td>Smart Fit Colombia</td>
+      <td>camilo.sarasti@smartfit.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Marlon Acuña</td>
+      <td>Bodytech</td>
+      <td>marlon.acuna@bodytech.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Claudia Palacio Echeverri</td>
+      <td>Bodytech</td>
+      <td>claudia.palacio@bodytechcorp.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>William Ortiz</td>
+      <td>Nueva EPS</td>
+      <td>william.ortiz@nuevaeps.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Maria Palacio</td>
+      <td>Nueva EPS</td>
+      <td>maria.palacio@nuevaeps.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Veronica Morron</td>
+      <td>Nueva EPS</td>
+      <td>veronica.morron@nuevaeps.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Alex Andrade</td>
+      <td>Sanitas</td>
+      <td>aandrade@colsanitas.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Melissa Guzman</td>
+      <td>Sanitas</td>
+      <td>mguzman@colsanitas.com</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Alexandra Sanchez</td>
+      <td>Famisanar</td>
+      <td>asanchez@famisanar.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Guillermo Torres</td>
+      <td>Famisanar</td>
+      <td>gtorres@famisanar.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Dora Gutierrez</td>
+      <td>Famisanar</td>
+      <td>dgutierrez@famisanar.com.co</td>
+      <td><span class="badge badge-warning">11d sin respuesta</span></td>
+    </tr><tr>
+      <td>Maria Buitrago</td>
+      <td>Frisby</td>
+      <td>mbuitrago@frisby.com.co</td>
+      <td><span class="badge badge-warning">7d sin respuesta</span></td>
+    </tr></tbody>
+    </table>
+  </div>
+
+  <!-- Rebotados -->
+  <div class="section">
+    <h2>🚫 Rebotados (no llegaron)</h2>
+    
+    <table>
+      <thead><tr><th>Contacto</th><th>Empresa</th><th>Email</th><th>Motivo</th></tr></thead>
+      <tbody><tr>
+    <td>Monica Cardenas</td>
+    <td>Colsubsidio</td>
+    <td>monica.cardenas@colsubsidio.com</td>
+    <td><span class="badge badge-danger" title="550 5.7.129 — bloqueado por el filtro de seguridad de Microsoft 365 del destinatario (remitente no autorizado en su accept list). Posible falso positivo de spam por el asunto en mayúsculas.">Rebotado</span></td>
+  </tr><tr>
+    <td>Ana Rondón</td>
+    <td>Arturo Calle</td>
+    <td>arondon@arturocalle.com</td>
+    <td><span class="badge badge-danger" title="550 5.1.1 — la cuenta no existe (Google Workspace). Email de Hunter.io inválido/desactualizado.">Rebotado</span></td>
+  </tr><tr>
+    <td>Juan Jaramillo</td>
+    <td>Arturo Calle</td>
+    <td>jjaramillo@arturocalle.com</td>
+    <td><span class="badge badge-danger" title="550 5.1.1 — la cuenta no existe (Google Workspace). Email de Hunter.io inválido/desactualizado.">Rebotado</span></td>
+  </tr></tbody>
+    </table>
+  </div>
+
+  <!-- Leads pendientes de contactar -->
+  <div class="section">
+    <h2>🎯 Leads de Hunter.io pendientes de contactar</h2>
+    <div class="empty">Todos los leads de Hunter.io ya fueron contactados ✓</div>
+  </div>
+
+</div>
+
+<div class="footer">Generado automáticamente por Dari · X-Tracking · 2026-07-07T15:30:51.059Z</div>
+</body>
+</html>
